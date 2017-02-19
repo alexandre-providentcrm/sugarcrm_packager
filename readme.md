@@ -10,7 +10,11 @@ Create a new packge load based on github commits
 ##Setup
 
 Select the branch you want in the project folder
-Get the Commit GUID -> You can use the git log or the github
+Get the Commit GUID -> You can use the 
+```shell
+git log 
+```
+or the github
 Set all the field
 
 * Description
