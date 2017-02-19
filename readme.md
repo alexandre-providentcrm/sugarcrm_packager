@@ -6,13 +6,12 @@ Create a new packge load based on github commits
 * New files and folders
 * Zip all the content
 
-
 ##Setup
 
 Select the branch you want in the project folder
 Get the Commit GUID -> You can use the 
 ```shell
-git log 
+	git log 
 ```
 
 Set all the field
@@ -22,7 +21,7 @@ Set all the field
 * Published Date
 * Version
 
-Done your package will be available as a zip file called #{Name}_#{Version}.zip
+Your package will be available as a zip file called #{Name}_#{Version}.zip
 
 #TODO
 
