@@ -22,15 +22,14 @@ class Manifest
     git = Git.new(args)
     files = git.get_diff(@project_folder,@commit_guid)
     
-    temp_path = Dir.pwd + "/temp/"
+    temp_path =  "#{Dir.pwd }/temp/"
     
     manifest_path = "#{temp_path}manifest.php"
     
     generate_file(files, manifest_path)
 
-    zip(Dir.pwd + "/temp",Dir.pwd + "/#{@name}_#{@version}.zip")
+    zip( "#{Dir.pwd}/temp", "#{Dir.pwd}/#{@name}_#{@version}.zip")
 
-    
     FileUtils.rm_r temp_path
     
   end

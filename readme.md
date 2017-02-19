@@ -38,7 +38,5 @@ Done your package will be available as a zip file called #{Name}_#{Version}.zip
 
 ## Tasks
 * create a list of commit than the user just pick which one he wants
-* Delete the temp folder after to generate
-* Delete the list_of_changes.txt
 * Create Unit Tests
 * Improve da validations (Folder, commits..)

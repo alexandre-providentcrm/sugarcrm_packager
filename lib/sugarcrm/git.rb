@@ -34,6 +34,8 @@ class Git
       files << {from: "<basepath>/#{file_path}", to: file_path}
     end
 
+    delete_temp_file
+    
     return files
 
   end
@@ -42,7 +44,7 @@ class Git
     return Dir.pwd + '/' + TEMP_FILE
   end
 
-  def delete_temp_file()
+  def delete_temp_file
       File.delete(get_path_temp_file)
   end
 
