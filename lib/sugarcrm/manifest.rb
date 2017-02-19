@@ -1,3 +1,4 @@
+require_relative 'ZipFileGenerator'
 require_relative('git')
 
 class Manifest
@@ -18,8 +19,16 @@ class Manifest
 
     args = { project_folder: Dir.pwd}
     git = Git.new(args)
-    git.get_diff(@project_folder,@commit_guid)
-    return true
+    files = git.get_diff(@project_folder,@commit_guid)
+    
+    puts temp_path = Dir.pwd + "/temp/"
+    
+    puts manifest_path = "#{temp_path}manifest.php"
+    
+    generate_file(files, manifest_path)
+
+    zip(Dir.pwd + "/temp",Dir.pwd + "/out.zip")
+    
   end
 
   def generate_file(list_of_files, save_at)
@@ -31,6 +40,14 @@ class Manifest
 
     out_file.close
 
+  end
+
+  def zip(directory_to_zip,output_file)
+    if File.exist?(output_file)
+      File.delete(output_file)
+    end
+    zf = ZipFileGenerator.new(directory_to_zip, output_file)
+    zf.write()
   end
   def create_header
     return "
