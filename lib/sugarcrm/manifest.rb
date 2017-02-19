@@ -1,5 +1,6 @@
 require_relative 'ZipFileGenerator'
 require_relative('git')
+require 'fileutils'
 
 class Manifest
 
@@ -28,6 +29,9 @@ class Manifest
     generate_file(files, manifest_path)
 
     zip(Dir.pwd + "/temp",Dir.pwd + "/#{@name}_#{@version}.zip")
+
+    
+    FileUtils.rm_r temp_path
     
   end
 
