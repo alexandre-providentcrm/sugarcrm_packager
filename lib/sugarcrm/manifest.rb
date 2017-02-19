@@ -27,7 +27,7 @@ class Manifest
     
     generate_file(files, manifest_path)
 
-    zip(Dir.pwd + "/temp",Dir.pwd + "/out.zip")
+    zip(Dir.pwd + "/temp",Dir.pwd + "/#{@name}_#{@version}.zip")
     
   end
 

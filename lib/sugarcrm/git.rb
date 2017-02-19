@@ -35,7 +35,6 @@ class Git
     end
 
     return files
-    
 
   end
 
