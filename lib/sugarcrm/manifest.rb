@@ -21,9 +21,9 @@ class Manifest
     git = Git.new(args)
     files = git.get_diff(@project_folder,@commit_guid)
     
-    puts temp_path = Dir.pwd + "/temp/"
+    temp_path = Dir.pwd + "/temp/"
     
-    puts manifest_path = "#{temp_path}manifest.php"
+    manifest_path = "#{temp_path}manifest.php"
     
     generate_file(files, manifest_path)
 
@@ -36,7 +36,7 @@ class Manifest
 
     out_file = File.new(save_at, "w")
 
-    out_file.puts(manifest)
+    out_file.write(manifest)
 
     out_file.close
 
