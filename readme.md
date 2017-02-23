@@ -1,4 +1,4 @@
-#SugarCRM Packager Creator
+#SugarCRM Package Creator
 
 Create a new packge load based on github commits
 
@@ -9,12 +9,12 @@ Create a new packge load based on github commits
 ##Setup
 
 Select the branch you want in the project folder
-Get the Commit GUID -> You can use the 
+Get the Commit GUID -> You can use the terminal command
 ```shell
 	git log 
 ```
 
-Set all the field
+Set all the fields
 
 * Description
 * Name
@@ -23,7 +23,7 @@ Set all the field
 
 Your package will be available as a zip file called #{Name}_#{Version}.zip
 
-#TODO
+#TO DO
 
 ##Missing parameters 
 
@@ -36,6 +36,6 @@ Your package will be available as a zip file called #{Name}_#{Version}.zip
 * exact_matches
 
 ## Tasks
-* create a list of commit than the user just pick which one he wants
+* create a list of commits. Then the user picks the one he wants
 * Create Unit Tests
-* Improve da validations (Folder, commits..)
+* Improve the validations (Folder, commits..)
