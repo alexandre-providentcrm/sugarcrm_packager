@@ -30,7 +30,7 @@ class Manifest
 
     zip( "#{Dir.pwd}/temp", "#{Dir.pwd}/#{@name}_#{@version}.zip")
 
-    FileUtils.rm_r temp_path
+    #FileUtils.rm_r temp_path
     
   end
 
@@ -47,7 +47,7 @@ class Manifest
 
   def zip(directory_to_zip,output_file)
     if File.exist?(output_file)
-      File.delete(output_file)
+      #File.delete(output_file)
     end
     zf = ZipFileGenerator.new(directory_to_zip, output_file)
     zf.write()

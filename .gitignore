@@ -1,4 +1,4 @@
-out.zip
+*.zip
 out/*
 temp/*
 list_of_changes.txt

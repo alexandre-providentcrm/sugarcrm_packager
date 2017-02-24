@@ -34,7 +34,7 @@ class Git
       files << {from: "<basepath>/#{file_path}", to: file_path}
     end
 
-    delete_temp_file
+    #delete_temp_file
     
     return files
 
